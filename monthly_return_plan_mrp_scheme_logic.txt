@@ -1,0 +1,122 @@
+================================================================================
+                    MONTHLY RETURN PLAN (MRP) - SCHEME LOGIC
+================================================================================
+
+1. SCHEME OVERVIEW
+--------------------------------------------------------------------------------
+Scheme Name            : Monthly Return Plan (MRP)
+Scheme Classification  : Non-Cumulative Fixed Term Deposit / Monthly Income Scheme (MIS)
+Deposit Nature         : One-time Lump-Sum Contribution (Upfront Investment)
+Tenure Duration        : 1 Year to 6 Years (12, 24, 36, 48, 60, 72 Months)
+Payout Frequency       : Monthly Interest Payout to Customer / Member
+Maturity Settlement    : 100% of Initial Contribution (Principal) Returned at Maturity
+
+
+2. CORE FINANCIAL LOGIC & FORMULA
+--------------------------------------------------------------------------------
+- The customer makes an upfront contribution (e.g., Rs. 1,00,000).
+- Interest is calculated on the principal based on the annual interest rate.
+- Rather than compounding to maturity, the interest is disbursed EVERY MONTH.
+- At tenure completion (maturity date), the original principal amount is refunded.
+
+Formulas:
+  a) Annual Interest = (Contribution Amount * Annual Interest Rate %) / 100
+  b) Monthly Return  = Annual Interest / 12
+                     = (Contribution Amount * Annual Interest Rate %) / 1200
+  c) Total Return    = (Monthly Return * Tenure in Months) + Principal
+
+
+3. INTEREST RATE SPECIFICATIONS
+--------------------------------------------------------------------------------
+Tenure (Years) | General Category (%) | Senior Citizen Category (%) | Senior Citizen Extra
+---------------+----------------------+------------------------------+---------------------
+    Year 1     |        10.00%        |            10.50%            |       +0.50%
+    Year 2     |        10.50%        |            11.00%            |       +0.50%
+    Year 3     |        11.00%        |            11.50%            |       +0.50%
+    Year 4     |        11.50%        |            12.00%            |       +0.50%
+    Year 5     |        12.00%        |            12.50%            |       +0.50%
+    Year 6     |        12.50%        |            13.00%            |       +0.50%
+
+* Rate Rule:
+  - Base interest rate starts at 10.0% for Year 1 and increases by 0.5% each year up to 12.5%.
+  - Senior Citizens receive an additional +0.50% incentive across all years (10.5% to 13.0%).
+
+
+4. MONTHLY RETURN SCHEDULE TABLE (Baseline: Rs. 1,00,000 Contribution)
+--------------------------------------------------------------------------------
+YEAR | CONTRIBUTION | GENERAL RATE | MONTHLY RETURN | SENIOR RATE | SENIOR RETURN
+-----+--------------+--------------+----------------+-------------+---------------
+ 1   |  Rs. 100,000 |    10.00%    |    Rs.  830    |    10.50%   |    Rs.  875
+ 2   |  Rs. 100,000 |    10.50%    |    Rs.  875    |    11.00%   |    Rs.  916
+ 3   |  Rs. 100,000 |    11.00%    |    Rs.  916    |    11.50%   |    Rs.  958
+ 4   |  Rs. 100,000 |    11.50%    |    Rs.  958    |    12.00%   |    Rs. 1,000
+ 5   |  Rs. 100,000 |    12.00%    |    Rs. 1,000   |    12.50%   |    Rs. 1,040
+ 6   |  Rs. 100,000 |    12.50%    |    Rs. 1,040   |    13.00%   |    Rs. 1,083
+
+Calculation Breakdown Notes:
+- Year 1 General: 100,000 * 10.0% / 12 = 833.33  -> Displayed as Rs. 830
+- Year 2 General: 100,000 * 10.5% / 12 = 875.00  -> Exact Rs. 875
+- Year 3 General: 100,000 * 11.0% / 12 = 916.67  -> Displayed as Rs. 916
+- Year 4 General: 100,000 * 11.5% / 12 = 958.33  -> Displayed as Rs. 958
+- Year 5 General: 100,000 * 12.0% / 12 = 1000.00 -> Exact Rs. 1,000
+- Year 6 General: 100,000 * 12.5% / 12 = 1041.67 -> Displayed as Rs. 1,040
+
+Senior Citizen Breakdown:
+- Year 1 Senior:  100,000 * 10.5% / 12 = 875.00  -> Exact Rs. 875
+- Year 2 Senior:  100,000 * 11.0% / 12 = 916.67  -> Displayed as Rs. 916
+- Year 3 Senior:  100,000 * 11.5% / 12 = 958.33  -> Displayed as Rs. 958
+- Year 4 Senior:  100,000 * 12.0% / 12 = 1000.00 -> Exact Rs. 1,000
+- Year 5 Senior:  100,000 * 12.5% / 12 = 1041.67 -> Displayed as Rs. 1,040
+- Year 6 Senior:  100,000 * 13.0% / 12 = 1083.33 -> Displayed as Rs. 1,083
+
+
+5. CUMULATIVE EARNINGS ACROSS FULL TENURE
+--------------------------------------------------------------------------------
+Tenure | Category | Monthly Return | Total Interest Paid | Principal Refunded | Total Received
+-------+----------+----------------+---------------------+--------------------+---------------
+1 Year | General  | Rs.   830      | Rs.   9,960         | Rs. 100,000        | Rs. 109,960
+       | Senior   | Rs.   875      | Rs.  10,500         | Rs. 100,000        | Rs. 110,500
+-------+----------+----------------+---------------------+--------------------+---------------
+2 Year | General  | Rs.   875      | Rs.  21,000         | Rs. 100,000        | Rs. 121,000
+       | Senior   | Rs.   916      | Rs.  21,984         | Rs. 100,000        | Rs. 121,984
+-------+----------+----------------+---------------------+--------------------+---------------
+3 Year | General  | Rs.   916      | Rs.  32,976         | Rs. 100,000        | Rs. 132,976
+       | Senior   | Rs.   958      | Rs.  34,488         | Rs. 100,000        | Rs. 134,488
+-------+----------+----------------+---------------------+--------------------+---------------
+4 Year | General  | Rs.   958      | Rs.  45,984         | Rs. 100,000        | Rs. 145,984
+       | Senior   | Rs. 1,000      | Rs.  48,000         | Rs. 100,000        | Rs. 148,000
+-------+----------+----------------+---------------------+--------------------+---------------
+5 Year | General  | Rs. 1,000      | Rs.  60,000         | Rs. 100,000        | Rs. 160,000
+       | Senior   | Rs. 1,040      | Rs.  62,400         | Rs. 100,000        | Rs. 162,400
+-------+----------+----------------+---------------------+--------------------+---------------
+6 Year | General  | Rs. 1,040      | Rs.  74,880         | Rs. 100,000        | Rs. 174,880
+       | Senior   | Rs. 1,083      | Rs.  77,976         | Rs. 100,000        | Rs. 177,976
+
+
+6. SYSTEM IMPLEMENTATION SPECIFICATIONS (Multicred System)
+--------------------------------------------------------------------------------
+Entity: SchemeType
+  - code                     : MIS / MRP
+  - name                     : Monthly Return Plan (MRP)
+  - calculation_type         : LUMP_SUM
+  - default_frequency        : MONTHLY
+
+Entity: DepositScheme
+  - scheme_type              : MIS
+  - collection_frequency     : ONE_TIME
+  - interest_payout_frequency: MONTHLY
+  - senior_citizen_extra_rate: 0.50
+
+Entity: DepositSchemeInterestRate (Tiers)
+  - Tier 1: Tenure = 1, Tenure Unit = YEARS, Interest Rate = 10.00%, Senior Extra = 0.50%
+  - Tier 2: Tenure = 2, Tenure Unit = YEARS, Interest Rate = 10.50%, Senior Extra = 0.50%
+  - Tier 3: Tenure = 3, Tenure Unit = YEARS, Interest Rate = 11.00%, Senior Extra = 0.50%
+  - Tier 4: Tenure = 4, Tenure Unit = YEARS, Interest Rate = 11.50%, Senior Extra = 0.50%
+  - Tier 5: Tenure = 5, Tenure Unit = YEARS, Interest Rate = 12.00%, Senior Extra = 0.50%
+  - Tier 6: Tenure = 6, Tenure Unit = YEARS, Interest Rate = 12.50%, Senior Extra = 0.50%
+
+Maturity Calculation Logic:
+  - Monthly Payout  = round((Deposit Amount * Rate / 100) / 12, 2)
+  - Maturity Amount = Deposit Amount (Principal returned in full at maturity)
+
+================================================================================
